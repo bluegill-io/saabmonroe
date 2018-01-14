@@ -2,9 +2,9 @@ const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  entry: ['./app/js/application.es6', './app/stylesheets/application.sass'],
+  entry: ['./app/js/application.js', './app/stylesheets/application.sass'],
   resolve: {
-    extensions: ['.es6', '.js', '.jsx'],
+    extensions: ['.es6', '.js'],
     modules: [
       path.join(__dirname),
       'app/js',
@@ -23,11 +23,6 @@ module.exports = {
         query: {
           presets: ['es2015']
         }
-      },
-      {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        loader: "eslint-loader"
       },
       {
         test: /\.(sass|scss|css)$/,

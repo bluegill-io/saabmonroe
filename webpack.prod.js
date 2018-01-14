@@ -5,19 +5,18 @@ const path = require("path");
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const VERSION  = require('./package.json').version;
-const fileName = 'str-' + VERSION + '.min.js';
+const fileName = 'saabmonroe-' + VERSION + '.min.js';
 
 const config = Object.create(baseConfig);
 
-config.devtool = 'eval-source-map';
 config.plugins = [
-  new UglifyJSPlugin,
+  new UglifyJSPlugin({sourceMap: true}),
   new S3Plugin({
     s3Options: {
-      region: 'us-east-2'
+      region: 'us-east-1'
     },
     s3UploadOptions: {
-      Bucket: 'saabmonroe-wedding'
+      Bucket: 'saabmonroe-assets'
     }
   }),
   new webpack.ProvidePlugin({
