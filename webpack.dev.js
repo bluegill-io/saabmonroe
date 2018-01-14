@@ -11,7 +11,6 @@ config.plugins = [
     $: 'jquery',
     jQuery: 'jquery',
     'window.jQuery': 'jquery',
-    '_': 'underscore',
   }),
   new ExtractTextPlugin({
     filename: 'bundle.css',

@@ -14,17 +14,16 @@ config.plugins = [
   new UglifyJSPlugin,
   new S3Plugin({
     s3Options: {
-      region: 'us-west-2'
+      region: 'us-east-2'
     },
     s3UploadOptions: {
-      Bucket: 'str-production'
+      Bucket: 'saabmonroe-wedding'
     }
   }),
   new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery',
     'window.jQuery': 'jquery',
-    '_': 'underscore',
   }),
   new ExtractTextPlugin({
     filename: 'bundle.css',
