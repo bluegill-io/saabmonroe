@@ -1,6 +1,22 @@
 .cursor-pointer
   cursor: pointer !important
 
-.f-xlarge
+.fs-xlarge
   font-size: 60px
+  @media (max-width: 768px)
+    font-size: 36px
 
+.container--large
+  padding: 60px 0;
+  @media (max-width: 768px)
+    padding: 30px 0;
+
+.f-button
+  &.active
+    background-color: rgba(0,0,0,0.1)
+  &:hover
+    background-color: rgba(0,0,0,0.1)
+
+.pb-5-mobile
+  @media (max-width: 768px)
+    padding-bottom: 3rem !important
