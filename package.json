@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "npm run clean && webpack-dev-server --config webpack.dev.js --progress --colors --inline --output-public-path=/public/",
-    "prod": "npm run clean && webpack -p --config webpack.prod.js",
+    "prod": "npm run clean && webpack --config webpack.prod.js",
     "clean": "rimraf dist",
     "lint": "eslint . || true"
   },
